@@ -60,7 +60,7 @@ fn increment() {
     // should increase counter by 1
     let res = query(&mut deps, QueryMsg::GetCount {}).unwrap();
     let value: CountResponse = from_binary(&res).unwrap();
-    assert_eq!(value.count, 18);
+    assert_eq!(value.count, 34);
 }
 
 #[test]

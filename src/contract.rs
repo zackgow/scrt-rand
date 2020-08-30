@@ -112,7 +112,7 @@ mod tests {
         // should increase counter by 1
         let res = query(&deps, QueryMsg::GetCount {}).unwrap();
         let value: CountResponse = from_binary(&res).unwrap();
-        assert_eq!(18, value.count);
+        assert_eq!(34, value.count);
     }
 
     #[test]
