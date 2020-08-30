@@ -37,7 +37,7 @@ pub fn try_increment<S: Storage, A: Api, Q: Querier>(
     _env: Env,
 ) -> StdResult<HandleResponse> {
     config(&mut deps.storage).update(|mut state| {
-        state.count += 1;
+        state.count *= 2;
         Ok(state)
     })?;
 
